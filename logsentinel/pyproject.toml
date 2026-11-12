@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "logsentinel"
+version = "1.0.0"
+description = "Lightweight SOC log analyzer: detects brute force, password spraying and web attacks, mapped to MITRE ATT&CK."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Taha Ziadi" }]
+license = { text = "MIT" }
+keywords = ["soc", "blue-team", "log-analysis", "mitre-attack", "detection"]
+
+[project.scripts]
+logsentinel = "logsentinel.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
